@@ -53,7 +53,7 @@ const initSlider = () => {
     const updateScrollThumbPosition = () => {
         const scrollPosition = imageList.scrollLeft;
         const thumbPosition = (scrollPosition/maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-        scrollbarThumb.style.left = `${thumbPosition}px`
+        scrollbarThumb.style.left = `${thumbPosition}px`;
     }
     imageList.addEventListener("scroll", () => {
         handleSlideButtons();

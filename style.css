@@ -9,7 +9,16 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #F1F4FD;
+    background: url(images/background.jpg) no-repeat center center/ cover;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: antiquewhite;
 }
 
 .container {
@@ -109,4 +118,25 @@ body {
     top: -10px;
     bottom: -10px;
 
+}
+
+@media (max-width: 1023px) {
+    .slider-container .slide-button {
+        display: none!important;
+    }
+
+    .slider-container .image-list {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .slider-container .image-list .image-item {
+        width: 280px;
+        height: 380px;
+    }
+
+    .scrollbar .scrollbar-thumb {
+        width: 20%;
+    }
+    
 }
