@@ -3,3 +3,110 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #F1F4FD;
+}
+
+.container {
+    max-width: 1200px;
+    width: 95%;
+}
+
+.slider-container {
+    position: relative;
+}
+.slider-container .slide-button {
+    top: 50%;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    color: white;
+    border: none;
+    outline: none;
+    background: #000;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-container .slide-button:hover {
+    background: #444;
+}
+
+.slider-container .slide-button#prev-slide {
+    left: -20px;
+}
+
+.slider-container .slide-button#next-slide {
+    right: -20px;
+}
+
+.slider-container .image-list {
+    display: grid;
+    gap: 18px;
+    margin-bottom: 30px;
+    font-size: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-template-columns: repeat(8,1fr);
+}
+
+.slider-container .image-list::-webkit-scrollbar{
+    display: none;
+}   
+
+.slider-container .image-list .image-item {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.container .scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+}
+
+.scrollbar .scrollbar-tracker {
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    position: relative;
+    border-radius: 4px;
+}
+
+.scrollbar:hover .scrollbar-tracker {
+    height: 4px;
+}
+
+.scrollbar .scrollbar-thumb {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: #000;
+    border-radius: inherit;
+    cursor: grab;
+}
+
+.scrollbar .scrollbar-tracker:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right:0;
+    top: -10px;
+    bottom: -10px;
+
+}
